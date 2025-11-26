@@ -21,7 +21,7 @@ if "SALT" not in st.secrets or not st.secrets["SALT"]:
     st.error("Missing SALT in Streamlit secrets. Set SALT locally in .streamlit/secrets.toml and in Streamlit Cloud app settings.")
     st.stop()
 
-SALT = st.secrets["SALT"]
+SALT = st.secrets["maryhadalittlelambandtonyhadabigelephant"]
 
 # ---------------------------
 # Defaults / constants
@@ -335,3 +335,4 @@ with st.expander("📊 Summary"):
     st.write(pretty.groupby(["Sector","Decision"]).size().rename("N"))
 
 st.caption("Privacy: Raw emails are dropped immediately. PIDs are salted hashes. Configure SALT via secrets.")
+
